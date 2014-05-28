@@ -41,9 +41,115 @@
 // 	font-family: "book",arial,sans-serif 
 	
 body
-	font-size: 12px 
+	position: relative
+	color: #2B2B2B 
+	font-size: 14px 
 	font-family: Arial, sans-serif 
 	line-height: 1.4
+	background: url('../img/bg-img.png') no-repeat 35% -45px
+	background-attachment: fixed
+	&:before
+		position: absolute
+		content: "" 
+		top: 0
+		left: 0
+		width: 100%
+		min-height: 100%
+		opacity: 0.8 
+		z-index: -1 
+		background: url('../img/bg-pic.png') 
 
 
-// common blocks      
+// common blocks 
+.header__text, .header__phone, .nav, .preview__item, .title, .info__list
+	font-family: 'Roboto Condensed', sans-serif
+
+//container
+.container
+	margin: 0 auto
+	width: 950px
+	
+// header
+.header
+	padding-top: 10px
+	height: 101px
+	background-color: #fff
+	// +background-image(linear-gradient(bottom, rgba(255,255,255,.37) 9%, rgba(0,0,0,.37) 91%))
+	+clr
+	+box
+	.header__left
+		float: left
+	.header__logo
+		display: inline-block
+		+s(logo)
+	.header__text
+		margin: 12px 0 0 5px
+		width: 170px
+		color: #189B33 
+		font-size: 18px
+		font-weight: 700 
+		line-height: 1.2
+		vertical-align: top
+		text-transform: uppercase
+		display: inline-block
+	.header__right
+		float: right
+		text-align: right
+	.header__phone
+		position: relative
+		margin: 8px 0
+		padding-left: 40px
+		color: #252525 
+		line-height: 1
+		font-size: 26px
+		span
+			font-weight: 700 
+		i
+			position: absolute
+			top: 50%
+			left: 0
+			width: 30px
+			height: 30px
+			margin-top: -15px
+			+border-radius(15px)
+			background-color: #f5bd13
+			display: block
+			&:before
+				position: absolute
+				content: ""
+				top: 50%
+				left: 50%
+				margin: -8px 0 0 -7.5px
+				+s(pic-phone)
+
+//title
+.title
+	font-size: 24px
+	font-weight: 700
+	text-transform: uppercase 
+
+//btn
+.btn
+	position: relative
+	padding: 7px 10px 
+	+border-radius(3px) 
+	font-family: Arial, sans-serif
+	display: inline-block
+	+transition(0.2s)
+	&.btn_callback
+		font-size: 14px
+		color: #2B2B2B 
+		background: #F5BD13 
+		&:hover
+			background: #FFCD39 
+		&:active
+			background-color: #f5bd13
+			+background-image(linear-gradient(bottom, rgba(255,255,255,.12) 0%, rgba(0,0,0,.12) 100%))
+	&.btn_view
+		color: #fff
+		background: #2B2B2B 
+		&:hover
+			background: #189B33 
+		&:active
+			background-color: #007d15
+			+background-image(linear-gradient(bottom, rgba(255,255,255,.12) 0%, rgba(0,0,0,.12) 100%))
