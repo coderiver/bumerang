@@ -152,3 +152,266 @@
 			display: block
 .about
 	padding: 46px 0 
+	p
+		margin-top: 10px
+	.about__row
+		margin: 28px 0 45px
+		font-size: 0
+	.about__item
+		text-align: center
+		width: 16.6%
+		vertical-align: top
+		color: #252525 
+		text-decoration: none
+		display: inline-block
+		+transition(0.2s)
+		&:hover	
+			text-decoration: underline
+			.about__ico
+				+box-shadow(0 0 3px #f5bd13)
+	.about__ico
+		position: relative
+		height: 69px
+		width: 69px
+		+border-radius(50%)
+		background: #f5bd13
+		display: inline-block
+		i
+			position: absolute
+			top: 50%
+			left: 50%
+			display: block
+		&.about__ico_1
+			i
+				margin: -18px 0 0 -18px 
+				+s(arr1)
+		&.about__ico_2
+			i
+				margin: -18px 0 0 -12.5px
+				+s(arr2)
+		&.about__ico_3
+			i
+				margin: -13px 0 0 -10.5px
+				+s(arr3)
+		&.about__ico_4
+			i
+				margin: -12.5px 0 0 -9.5px
+				+s(arr4)
+		&.about__ico_5
+			i
+				margin: -12px 0 0 -18px
+				+s(arr5)
+		&.about__ico_6
+			i
+				margin: -15px 0 0 -14.5px
+				+s(arr6)
+	.about__title
+		margin-top: 16px
+		text-align: center
+		font-size: 17px
+		font-weight: 700 
+		text-transform: uppercase
+
+//reviews
+.reviews
+	position: relative
+	min-width: 950px
+	border-top: 2px solid #F6BD14 
+	border-bottom: 2px solid #F6BD14 
+	background-color: #154f35
+	+background-image(linear-gradient(left, rgba(0,0,0,.21) -25%, rgba(255,255,255,.1) 50%, rgba(0,0,0,.21) 125%))
+	&:before
+		position: absolute
+		content: ""
+		top: 42px
+		left: 50%
+		bottom: 40px
+		margin-left: -1px
+		width: 1px
+		border-left: 1px dotted #8db0a0
+	.container
+		position: relative
+		padding: 38px 0 
+		z-index: 1
+		&:before
+			position: absolute
+			content: ""
+			top: 0
+			right: -168px
+			height: 100%
+			width: 100% 
+			opacity: 0.4
+			z-index: -1
+			background: url('../img/rev-bg.png') no-repeat 100% 0
+	.reviews__block
+		padding: 0 20px 8px
+		+box
+		&:first-child
+			padding-left: 0
+		&:last-child
+			padding-right: 0
+		.btn
+			float: right
+	.reviews__title
+		color: #FFF 
+		font-size: 24px
+		font-weight: 700 
+		text-transform: uppercase
+	.reviews__row
+		margin: 20px 0 16px
+		color: #FFF 
+	.reviews__col
+		padding-left: 25px
+		+box
+		&:first-child
+			padding-left: 0 
+	.reviews__img
+		width: 70px
+		height: 70px
+		line-height: 70px
+		text-align: center
+		overflow: hidden
+		border: 1px solid #F6BD14 
+		+border-radius(50%)
+		img
+			vertical-align: middle
+			display: inline-block
+	.reviews__user
+		margin: 5px 0 10px 
+		color: #F6BD14 
+
+//news
+.news
+	padding: 40px 0 48px
+	font-size: 13px
+	line-height: 1.3
+	.news__block
+		margin-top: 18px
+		+clr
+	.news__img
+		float: left
+		margin: 6px 0 0 0 
+		height: 109px
+		width: 109px
+		overflow: hidden
+		+border-radius(3px)
+	.news__text
+		float: left
+		padding-left: 30px
+		width: 360px
+		+box
+	.news__title, .news__date
+		font-size: 14px
+		text-transform: uppercase
+		font-weight: bold
+	.news__title
+		color: #164F36 
+		text-decoration: none
+		&:hover
+			text-decoration: underline
+	.news__date
+		color: #636363 
+	.news__img
+		&:hover + .news__text
+			.news__title
+				text-decoration: underline
+			
+//gallery
+.gallery
+	padding: 48px 0 
+	border-top: 1px dotted #7F7F7F 
+	.cycle
+		margin-top: 16px
+		border-top: 2px solid #F6BD14 
+		border-bottom: 2px solid #F6BD14
+	.cycle-slideshow
+		position: relative
+		height: 190px
+		font-size: 0
+		overflow: visible !important
+		&:before
+			position: absolute
+			content: ""
+			height: 100%
+			width: 1000%
+			top: 0
+			left: -1000%
+			z-index: 1000
+			opacity: 0.7
+			background: black
+		&:after
+			position: absolute
+			content: ""
+			top: 0
+			right: -1000%
+			height: 100%
+			width: 1000%
+			z-index: 1000
+			opacity: 0.7
+			background: black
+	.cycle__item
+		position: relative !important
+		width: 190px
+		overflow: hidden
+		&:hover
+			.cycle__block
+				visibility: visible
+				opacity: 1
+		img
+			width: 100%
+	.cycle__block
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		color: #252525 
+		z-index: 200
+		visibility: hidden
+		text-align: center
+		line-height: 190px
+		font-size: 17px
+		opacity: 0
+		background: #F6BD14
+		background: rgba(#f6bd14, .8)  
+		+transition(0.2s)
+	.cycle__nav
+		position: absolute
+		top: 0
+		width: 190px
+		height: 190px
+		z-index: 3000
+		background: none
+		display: block 
+		+transition(0.2s)
+		&:hover
+			background: #8BFCAB
+			background: rgba(#8bfcab, 0.2)  
+		&:before
+			position: absolute
+			content: ''
+			top: 50%
+			left: 50%
+			margin: -15.5px 0 0 -9px 
+	.cycle__nav_prev
+		left: -190px
+		&:before
+			+s(pref-pic)
+	.cycle__nav_next
+		right: -190px
+		&:before
+			+s(next-pic)
+
+
+//form
+.form
+	margin-top: 15px
+	.form__row
+		margin-bottom: 10px 
+	.form__row_top
+		font-size: 0
+		.input
+			margin-left: 2%
+			width: 49%
+			&:first-child
+				margin-left: 0

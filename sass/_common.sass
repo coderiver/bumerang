@@ -47,7 +47,7 @@ body
 	font-family: Arial, sans-serif 
 	line-height: 1.4
 	background: url('../img/bg-img.png') no-repeat 35% -45px
-	background-attachment: fixed
+	// background-attachment: fixed
 	&:before
 		position: absolute
 		content: "" 
@@ -61,7 +61,12 @@ body
 
 
 // common blocks 
-.header__text, .header__phone, .nav, .preview__item, .title, .info__list
+
+.out
+	min-width: 950px
+	overflow: hidden
+
+.header__text, .header__phone, .nav, .preview__item, .title, .info__list, .about__item, .reviews__title, .news__title, .news__date, .cycle__block
 	font-family: 'Roboto Condensed', sans-serif
 
 //container
@@ -136,7 +141,8 @@ body
 	font-family: Arial, sans-serif
 	display: inline-block
 	+transition(0.2s)
-	&.btn_callback
+	+box
+	&.btn_orange
 		font-size: 14px
 		color: #2B2B2B 
 		background: #F5BD13 
@@ -145,6 +151,15 @@ body
 		&:active
 			background-color: #f5bd13
 			+background-image(linear-gradient(bottom, rgba(255,255,255,.12) 0%, rgba(0,0,0,.12) 100%))
+	&.btn_orange-big
+		width: 230px
+		height: 40px
+		color: #FFF
+		font-size: 20px
+		font-weight: 700
+		text-transform: uppercase  
+		font-family: 'Roboto Condensed', sans-serif
+		background: #F6BD14 
 	&.btn_view
 		color: #fff
 		background: #2B2B2B 
@@ -153,3 +168,31 @@ body
 		&:active
 			background-color: #007d15
 			+background-image(linear-gradient(bottom, rgba(255,255,255,.12) 0%, rgba(0,0,0,.12) 100%))
+	&.btn_oll
+		color: #F6BD14 
+		text-decoration: underline
+		border: 1px solid #F6BD14 
+		background: none
+		&:hover
+			text-decoration: none
+		&:active
+			top: -1px
+//input
+.input
+	padding: 10px  
+	height: 38px
+	width: 100%
+	font-family: Arial,sans-serif
+	font-size: 14px 
+	color: #898989 
+	+border-radius(3px)
+	border: 1px solid #F8CA43 
+	background-color: #fff
+	display: inline-block
+	+box
+	&:focus
+		+placeholder
+			font-size: 0
+	&.input_textarea
+		height: 120px
+		resize: none
