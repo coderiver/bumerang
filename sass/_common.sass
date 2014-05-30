@@ -46,27 +46,32 @@ body
 	font-size: 14px 
 	font-family: Arial, sans-serif 
 	line-height: 1.4
-	background: url('../img/bg-img.png') no-repeat 35% -45px
+	background: url('../img/bg-img.png') no-repeat 35% -41px
 	// background-attachment: fixed
+
+
+// common blocks 
+
+.out
+	position: relative
+	min-width: 950px
+	overflow: hidden
+	min-height: 100%
+	height: auto !important
+	height: 100%
+	margin: 0 auto -125px 
 	&:before
 		position: absolute
 		content: "" 
 		top: 0
 		left: 0
 		width: 100%
-		min-height: 100%
+		bottom: 0
 		opacity: 0.8 
 		z-index: -1 
 		background: url('../img/bg-pic.png') 
 
-
-// common blocks 
-
-.out
-	min-width: 950px
-	overflow: hidden
-
-.header__text, .header__phone, .nav, .preview__item, .title, .info__list, .about__item, .reviews__title, .news__title, .news__date, .cycle__block
+.header__text, .header__phone, .nav, .preview__item, .title, .info__list, .about__item, .reviews__title, .news__title, .news__date, .cycle__block, .footer__phone
 	font-family: 'Roboto Condensed', sans-serif
 
 //container
@@ -196,3 +201,61 @@ body
 	&.input_textarea
 		height: 120px
 		resize: none
+
+.footer, .push 
+	height: 125px
+.footer
+	position: relative
+	padding-top: 10px
+	border-top: 1px dotted #7f7f7f
+	background: #FFF 
+	+box
+	.footer__left
+		float: left
+		width: 190px
+	.footer__logo
+		display: inline-block
+		+s(logo-footer)
+	.footer__copyright
+		color: #000 
+		font-size: 13px
+	.footer__right
+		float: right
+		width: 760px
+	.footer__nav
+		margin: 26px 0 3px
+		line-height: 1
+		text-align: right
+		.nav__item
+			a
+				padding: 0 0 0 16px
+				font-size: 14px
+				color: #000
+			&:before
+				content: none
+			&:first-child
+				a
+					padding-left: 0
+	.footer__row
+		+clr
+	.footer__phone
+		position: relative
+		float: left
+		padding-left: 33px
+		font-weight: 700 
+		font-size: 20px
+		&:before
+			position: absolute
+			content: ""
+			top: 50%
+			left: 3px
+			margin-top: -8px
+			+s(footer-phone) 
+		span
+			font-weight: 300 
+	.footer__studio
+		float: right
+		color: #000 
+		text-decoration: underline
+		&:hover
+			text-decoration: none

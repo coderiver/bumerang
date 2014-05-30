@@ -1,16 +1,16 @@
 // Normally mainpage styles
 
 //nav
-.nav
+.menu
 	height: 71px
 	border-top: 2px solid #F6BD14 
 	border-bottom: 2px solid #F6BD14 
 	background-color: #242424
 	+background-image(linear-gradient(left, rgba(0,0,0,.21) 0%, rgba(255,255,255,.21) 50%, rgba(0,0,0,.21) 100%))
-	.nav__list
-		line-height: 71px
-		font-size: 0
-		text-align: center
+.nav
+	line-height: 71px
+	font-size: 0
+	text-align: center
 	.nav__item
 		position: relative
 		padding-left: 1px 
@@ -150,10 +150,24 @@
 			margin-left: 0
 		img
 			display: block
-.about
-	padding: 46px 0 
-	p
-		margin-top: 10px
+		
+//about
+.about	
+	position: relative
+	&:before
+		position: absolute
+		content: "" 
+		top: 0
+		left: 0
+		height: 100%
+		width: 100%
+		z-index: -2
+		background: url('../img/bg-img.png') no-repeat 35% 84px
+		background-attachment: fixed
+	.about__l
+		padding: 46px 0 
+		p
+			margin-top: 10px
 	.about__row
 		margin: 28px 0 45px
 		font-size: 0
