@@ -23,7 +23,7 @@
 			</div>
 			<div class="header__right">
 				<div class="header__phone"><i></i>8(800)<span> 555 777 3</span></div>
-				<button class="btn btn_orange">Обратный звонок</button>
+				<button class="btn btn_orange js-btn">Обратный звонок</button>
 			</div>
 		</div>
 		<!-- END .container -->
@@ -234,24 +234,29 @@
 		<div class="container l">
 			<div class="title">Новости</div>
 			<div class="news__block l-col1">
-				<a href="#" class="news__img">
-					<img src="http://lorempixel.com/109/109/abstract" alt="img">
+				<a class="news__item" href="#">
+					<div class="news__img">
+						<img src="http://lorempixel.com/109/109/abstract" alt="img">
+					</div>
+					<div class="news__text">
+						<div class="news__title">Поступление нового сайдинга</div>
+						<div class="news__date">21.06.2014</div>
+						<p>Современный облицовочный материал. Хорошо моется. Не трескается зимой, в отличие от вагонки. Надежный. Огромный выбор расцветок и материалов, а также современный облицовочный материал. Хорошо моется. Не трескается зимой, в отличие от </p>
+					</div>
 				</a>
-				<div class="news__text">
-					<a href="#" class="news__title">Поступление нового сайдинга</a>
-					<div class="news__date">21.06.2014</div>
-					<p>Современный облицовочный материал. Хорошо моется. Не трескается зимой, в отличие от вагонки. Надежный. Огромный выбор расцветок и материалов, а также современный облицовочный материал. Хорошо моется. Не трескается зимой, в отличие от </p>
-				</div>
+				
 			</div>
 			<div class="news__block l-col2">
-				<a href="#" class="news__img">
-					<img src="http://lorempixel.com/109/109/abstract" alt="img">
+				<a class="news__item" href="#">
+					<div class="news__img">
+						<img src="http://lorempixel.com/109/109/abstract" alt="img">
+					</div>
+					<div class="news__text">
+						<div class="news__title">Поступление нового сайдинга</div>
+						<div class="news__date">21.06.2014</div>
+						<p>Современный облицовочный материал. Хорошо моется. Не трескается зимой, в отличие от вагонки. Надежный. Огромный выбор расцветок и материалов, а также современный облицовочный материал. Хорошо моется. Не трескается зимой, в отличие от </p>
+					</div>
 				</a>
-				<div class="news__text">
-					<a href="#" class="news__title">Поступление нового сайдинга</a>
-					<div class="news__date">21.06.2014</div>
-					<p>Современный облицовочный материал. Хорошо моется. Не трескается зимой, в отличие от вагонки. Надежный. Огромный выбор расцветок и материалов, а также современный облицовочный материал. Хорошо моется. Не трескается зимой, в отличие от </p>
-				</div>
 			</div>
 		</div>
 		<!-- END .container -->
@@ -338,6 +343,23 @@
 	<!-- END .container -->
 </div>
 <!-- END .footer -->
+
+<!-- BEGIN .popup -->
+<div class="popup popup_form js-popup-field" style="display: none;">
+		<div class="popup__field js-popup">
+			<div class="form">
+				<h3 class="title-ads">Записаться</h3>
+				<form class="js_loginform">
+					<div class="form__row"><input class="input error" type="text" name="name" placeholder="Ваше имя"></div>
+					<div class="form__row"><input class="input error" type="text" name="phone" placeholder="Номер телефона" onkeyup="return js_numbers(this);"></div>
+					<div class="form__row"><input type="submit" name="enter" value="Отправить" class="btn btn_orange btn_orange-big"></div>
+				</form>
+				<p>Оставьте, пожалуйста, ваше имя и телефон в форме заявки и наш менеджер свяжется с вами в течение часа.</p>
+				<i class="js-popup-close"></i>
+			</div>
+		</div>
+	</div>
+<!-- END .popup -->
 
 <script src="js/lib/head.js" data-headjs-load="js/init.js"></script>
 </body>

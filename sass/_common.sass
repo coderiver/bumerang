@@ -304,3 +304,45 @@ h1, h2, h3, h4, h5, h6,
 		text-decoration: underline
 		&:hover
 			text-decoration: none
+
+// popup
+.popup
+	position: absolute
+	top: 0
+	left: 0
+	bottom: 0
+	width: 100%
+	z-index: 1000
+	position: fixed
+	background: rgba(0, 0, 0, .4)
+	display: none
+	
+.popup__field
+	position: absolute
+	padding: 15px 30px 30px
+	top: 50%
+	left: 50%
+	margin: -203px 0 0 -206px
+	width: 412px
+	height: 345px
+	color: #000
+	z-index: 1000
+	border: 2px solid #ffcc00
+	background: #fff 
+	+border-radius(10px)
+	+box
+	i
+		position: absolute
+		content: "" 
+		top: 5px
+		right: 5px
+		cursor: pointer
+		+s(fancy_close)
+	.form
+		.title-ads
+			padding-bottom: 15px
+			font-size: 30px
+			text-align: center
+		.btn
+			text-transform: uppercase
+			font-size: 18px
